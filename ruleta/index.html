@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Chowder</title>
+    <link rel="icon" href="../img/icono.png">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <section class="MiUsuario">
+            <div class="navbar">
+                <div class="saldo-container">
+                    <img class="logo" src="../img/Logo.png">
+                    <div class="miSaldo"></div>
+                </div>
+                <div class="items">
+                    <div><a href="../pagina principal/paginaPrincipal.html">INICIO</a></div>
+                    <div><a href="#juegos">JUEGOS</a></div>
+                    <div><a href="#">COMENTARIOS</a></div>
+                    <div class="dropdown">
+                        <span><img src="../img/mundo.png" alt=""></span>
+                        <div class="dropdown-content">
+                            <p>Idioma</p>
+                            <div class="botones1">
+                                <button  onclick="location.href='../Ruleta2/index.html'" class="boton1 apretable">Español</button>
+                                <button  onclick="location.href='../Ruleta2/ruleta_ingles.html'" class="boton1 apretable">Ingles</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user">
+                        <div class="dropdown2">
+                            <span><img class="usuario" src="../img/user.png" alt=""></span>
+                            <div class="dropdown-content2">
+                                <div class="perfil">
+                                    <img src="../img/user.png" alt="">
+                                </div>
+                                <div class="edit">
+                                    <button id="ampliar-usuario"><img class="apretable" src="../img/edit.png"></button>
+                                </div>
+                                <p>Usuario</p>
+                                <p>usuario@gmail.com</p>
+                                <button class="apretable" onclick="location.href='../Login y resgistrarse/Login.html'">Cerrar sesión</button>
+                            </div>
+                        </div> 
+			<div class="dropdown-content3">
+                            <button id="cerrar-usuario">X</button>
+                            <div class="perfil">
+                                <img id="profile-picture" src="../img/user.png" alt="Foto de perfil">
+                            </div>
+                            <div class="input">
+                                <p>Cambiar nombre de usuario</p><input type="text">
+                            </div>
+                            <h1>Cambiar foto de perfil</h1>
+                            <div class="image-options">
+                                <img src="../img/pfp1.jpg" alt="Opción 1" onclick="selectImage(this)">
+                                <img src="../img/pfp2.jpg" alt="Opción 2" onclick="selectImage(this)">
+                                <img src="../img/pfp3.jpg" alt="Opción 3" onclick="selectImage(this)">
+                                <img src="../img/pfp4.jpg" alt="Opción 4" onclick="selectImage(this)">
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+            <div class="general">
+                <div class="Portadas">
+                    <h1>OTROS JUEGOS:</h1>
+                    <div class="a">
+                        <a href="../multi/multiplicador.html"><img class="portada1" src="../img/multiplicador.jpeg"/></a>
+                    </div>
+        
+                    <div class="a">
+                        <a href="../Slot/slot.html"><img class="portada2" src="../img/chicasP.png"/></a>
+                    </div>
+        
+             </div>
+             <div class="general-ruleta">
+                
+                <div class="juego">
+                    <button class="boton-girar apretable">Jugar!</button>  
+                    <div class="caja-fichas">
+                        <div class="contenedor-ficha ficha-1"><img src="../img/ficha1.png" class="ficha-apostar"></div>
+                        <div class="contenedor-ficha ficha-2"><img src="../img/ficha2.png" class="ficha-apostar"></div>
+                        <div class="contenedor-ficha ficha-3"><img src="../img/ficha3.png" class="ficha-apostar"></div>
+                        <div class="contenedor-ficha ficha-4"><img src="../img/ficha4.png" class="ficha-apostar"></div>
+                        <div class="contenedor-ficha ficha-5"><img src="../img/ficha5.png" class="ficha-apostar"></div>
+                        <div class="contenedor-ficha ficha-6"><img src="../img/ficha6.png" class="ficha-apostar"></div>
+                        <div class="contenedor-ficha ficha-7"><img src="../img/ficha7.png" class="ficha-apostar"></div>
+                    </div>
+                    <div class="caja-decisiones">
+                        <div class="decision sacar-ficha apretable"><i class="fas fa-backspace"></i></div>
+                        <div class="decision repetir apretable"><i class="fas fa-redo"></i>   </div>
+                        <div class="decision limpiar apretable"><i class="fas fa-eraser"></i></div>
+                    </div>
+                    <div class="ruleta-container">
+
+                        <div class="contenedor-pelota"><div class="pelota"></div></div>
+                        <div class="ruleta">
+                        <img class="fondoruleta" src="../img/fondoruleta.png">
+                        <div class="numero numero-verde">0<div class="pelota-ruleta"></div></div>
+                        <div class="numero numero-rojo">32</div>
+                        <div class="numero ">15</div>
+                        <div class="numero numero-rojo">19</div>
+                        <div class="numero">4</div>
+                        <div class="numero numero-rojo">21</div>
+                        <div class="numero">2</div>
+                        <div class="numero numero-rojo">25</div>
+                        <div class="numero ">17</div>
+                        <div class="numero numero-rojo">34</div>
+                        <div class="numero ">6</div>
+                        <div class="numero numero-rojo">27</div>
+                        <div class="numero ">13</div>
+                        <div class="numero numero-rojo">36</div>
+                        <div class="numero">11</div>
+                        <div class="numero numero-rojo">30</div>
+                        <div class="numero ">8</div>
+                        <div class="numero numero-rojo">23</div>
+                        <div class="numero ">10</div>
+                        <div class="numero numero-rojo">5</div>
+                        <div class="numero">24</div>
+                        <div class="numero numero-rojo">16</div>
+                        <div class="numero">33</div>
+                        <div class="numero numero-rojo">1</div>
+                        <div class="numero ">20</div>
+                        <div class="numero numero-rojo">14</div>
+                        <div class="numero ">31</div>
+                        <div class="numero numero-rojo">9</div>
+                        <div class="numero">22</div>
+                        <div class="numero numero-rojo">18</div>
+                        <div class="numero">29</div>
+                        <div class="numero numero-rojo">7</div>
+                        <div class="numero ">28</div>
+                        <div class="numero numero-rojo">12</div>
+                        <div class="numero ">35</div>
+                        <div class="numero numero-rojo">3</div>
+                        <div class="numero">26</div>
+                    </div>
+                </div>
+                <div class="caja-apuestas">
+                                <div class="apuesta-izquierda">
+                                    0
+                                </div>
+                                <div class="apuesta-centro">
+                                    <div class="apuesta-numeros">
+                                        <div class="numeros-visibles">
+                                            <div class="tableta-numero  tableta-numero-rojo">3</div>
+                                            <div class="tableta-numero ">6</div>
+                                            <div class="tableta-numero tableta-numero-rojo">9</div>
+                                            <div class="tableta-numero tableta-numero-rojo">12</div>
+                                            <div class="tableta-numero">15</div>
+                                            <div class="tableta-numero tableta-numero-rojo">18</div>
+                                            <div class="tableta-numero tableta-numero-rojo">21</div>
+                                            <div class="tableta-numero ">24</div>
+                                            <div class="tableta-numero tableta-numero-rojo">27</div>
+                                            <div class="tableta-numero tableta-numero-rojo">30</div>
+                                            <div class="tableta-numero">33</div>
+                                            <div class="tableta-numero tableta-numero-rojo">36</div>
+                                            <div class="tableta-numero ">2</div>
+                                            <div class="tableta-numero tableta-numero-rojo">5</div>
+                                            <div class="tableta-numero ">8</div>
+                                            <div class="tableta-numero">11</div>
+                                            <div class="tableta-numero tableta-numero-rojo">14</div>
+                                            <div class="tableta-numero">17</div>
+                                            <div class="tableta-numero ">20</div>
+                                            <div class="tableta-numero tableta-numero-rojo">23</div>
+                                            <div class="tableta-numero ">26</div>
+                                            <div class="tableta-numero">29</div>
+                                            <div class="tableta-numero tableta-numero-rojo">32</div>
+                                            <div class="tableta-numero">35</div>
+                                            <div class="tableta-numero tableta-numero-rojo">1</div>
+                                            <div class="tableta-numero ">4</div>
+                                            <div class="tableta-numero tableta-numero-rojo">7</div>
+                                            <div class="tableta-numero ">10</div>
+                                            <div class="tableta-numero">13</div>
+                                            <div class="tableta-numero tableta-numero-rojo">16</div>
+                                            <div class="tableta-numero tableta-numero-rojo">19</div>
+                                            <div class="tableta-numero ">22</div>
+                                            <div class="tableta-numero tableta-numero-rojo">25</div>
+                                            <div class="tableta-numero ">28</div>
+                                            <div class="tableta-numero">31</div>
+                                            <div class="tableta-numero tableta-numero-rojo">34</div>
+                                            <div class="numeros-invisibles">
+                                                <div class="invisible-grupo invisible-grupo-1">
+                                                    <div class="numero-invisible numero-invisible-fila-1"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-1"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-1"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-1"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-1"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-1"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-1"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-1"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-1"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-1"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-1"></div>
+                                                </div>
+                                                <div class="invisible-grupo invisible-grupo-2">
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-2"></div>
+                                                </div>
+                                                <div class="invisible-grupo invisible-grupo-3">
+                                                    <div class="numero-invisible numero-invisible-fila-3"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-3"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-3"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-3"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-3"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-3"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-3"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-3"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-3"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-3"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-3"></div>
+                                                </div>
+                                                <div class="invisible-grupo invisible-grupo-4">
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-4"></div>
+                                                </div>
+                                                <div class="invisible-grupo invisible-grupo-5">
+                                                    <div class="numero-invisible numero-invisible-fila-5"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-5"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-5"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-5"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-5"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-5"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-5"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-5"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-5"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-5"></div>
+                                                    <div class="numero-invisible numero-invisible-fila-5"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="apuesta-docenas">
+                                        <b class="docena">1er 12</b>
+                                        <b class="docena">2da 12</b>
+                                        <b class="docena">3er 12</b>
+                                    </div>
+                                    <div class="apuesta-cincuenta">
+                                        <div class="par">
+                                            <b class="mitad">1-18</b>
+                                            <b class="paridad">par</b>
+                                        </div>
+                                        <div class="div-color">
+                                            <div class="color-rojo color"></div>
+                                            <div class="color-negro color"></div>
+                                        </div>
+                                        <div class="impar">
+                                            <b class="paridad">impar</b>
+                                            <b class="mitad">19-36</b>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="apuesta-derecha">
+                                    <b class="tercio">1er</b>
+                                    <b class="tercio">2do</b>
+                                    <b class="tercio">3ro</b>
+                                </div>
+ 
+                </div>
+                    
+                </div>
+            </div>
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/2e1536868e.js" crossorigin="anonymous"></script>
+    
+    </div>
+</body>
+</html>
