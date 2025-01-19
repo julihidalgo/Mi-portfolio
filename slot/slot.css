@@ -562,6 +562,7 @@ h1{
     justify-content: center;
 }
 .juego{
+    position: relative;
     background: #FFF;
     display: flex;
     justify-content: center;
@@ -626,15 +627,30 @@ h1{
     left: 0;
     right: 0;
     bottom: 0; /* Ocupar todo el espacio del div */
-    display: none;
+    display:none ;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.8); /* Menos transparente */
     z-index: 2;
 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.alerta-ganador span{
+    background: #5f27cd;
+    font-size: 25px;
+    width: 150px;
+    height: 110px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-shadow:0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
 }
 .ganada{
-    display: block;
+    display: flex;
     top: 0%;
     animation: alerta-ganada 0.8s ease 0s ;
 }
