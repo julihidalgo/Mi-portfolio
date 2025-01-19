@@ -16,12 +16,14 @@ const personajes={
         "valor":3.3,
         "img":"../img/bellota.png",
         "clase":"bellota"
+
     },
     3:{
         "nombre":"mojo jojo",
         "valor":3.8,
         "img":"../img/mojo.png",
         "clase":"mojo"
+
     }
 };
 
@@ -63,10 +65,14 @@ let alertaGanador=document.querySelector(".alerta-ganador")
 let apuesta=document.querySelector(".apuesta")
 let testeo=500;
 let premioMensaje = document.querySelector('.premio-mensaje');
-
+let valorActual=0
+let premio=0
 function testear() {
+
     let apuestaActual = apuesta.textContent;
-    let premio = 0;
+    premio = 0;
+    estadoAlerta=0;
+    valorActual=0
 
     if (matriz[0][0] == matriz[1][0] && matriz[0][0] == matriz[2][0]) {
         premio += matriz[0][0].valor * apuestaActual;
@@ -94,21 +100,44 @@ setTimeout(() => {
             alertaGanador.classList.add("ganada");
             ultPremio.textContent = '$' + premio.toFixed(2);
             navbar.textContent = '🪙: ' + testeo.toFixed(2);
-            
+
             // Muestra el mensaje de premio
-            premioMensaje.textContent = 'Ganaste: $' + premio.toFixed(2);
-            premioMensaje.style.display = 'block'; // Muestra el mensaje
-            
+            premioMensaje.textContent = '$' + premio.toFixed(2);
+            premioIncremento=setInterval(()=>cambiarValor(),2)
             // Ocultar el mensaje y la alerta después de 2 segundos
-            setTimeout(() => {
-                alertaGanador.classList.remove("ganada");
-                premioMensaje.style.display = 'none'; // Oculta el mensaje
-            }, 1300);
+            
+    
+            
+            
         }
         activado = 0;
-    }, 1300);
+    }, 2000);
 }
-
+let estadoAlerta=0
+alertaGanador.addEventListener('click',()=>{
+    if(estadoAlerta==0){
+        valorActual=premio-0.01
+        premioContenedor.textContent="$"+valorActual.toFixed(2)
+        estadoAlerta=1
+    }
+    else if(estadoAlerta==1){
+        alertaGanador.classList.remove("ganada");
+    }
+})
+let premioContenedor=document.querySelector(".premio-incremento")
+function cambiarValor(){
+    if(valorActual<=premio){
+        valorActual+=0.01
+        premioContenedor.textContent="$"+valorActual.toFixed(2)
+    }
+    else{
+        estadoAlerta=1
+        valorActual=premio
+        premioContenedor.textContent="$"+valorActual.toFixed(2)
+        clearInterval(premioIncremento)
+        
+    }
+}
 
 let ultPremio=document.querySelector(".ultimo-premio")
 function animacion(){
@@ -130,7 +159,6 @@ function sumar(){
     else if (apuestaActual==10){apuesta.textContent=20;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
     else if (apuestaActual==20){apuesta.textContent=50;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
     else if (apuestaActual==50){apuesta.textContent=100;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
-    console.log("funciono")
 }
 function restar(){
     let apuestaActual=apuesta.textContent
@@ -138,7 +166,6 @@ function restar(){
     else if (apuestaActual==20){apuesta.textContent=10;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
     else if (apuestaActual==50){apuesta.textContent=20;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
     else if (apuestaActual==100){apuesta.textContent=50;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
-    console.log("funciono")
 }
 function jugar(){
     if (testeo<apuesta.textContent){
@@ -166,38 +193,10 @@ llenar(3)
 let navbar=document.querySelector(".miSaldo")
 navbar.textContent='🪙: '+testeo.toFixed(2)
 
-/*
-Usar para hacer la parte de incremento en las recompensas
-let incremento=document.querySelector(".incremento")
-let valorActual=1
-function cambiarValor(){
-    incremento.textContent="x"+valorActual.toFixed(2)
-}
-let corrida
-function aumentar(){
-    console.log(limiteDistancia)
-
-    if(limiteDistancia>1 && valorActual<limiteDistancia){
-        
-        valorActual+=0.01
-        cambiarValor()
-        console.log(valorActual)
-    }
-    else{
-        clearInterval(corrida)
-    }
-}
-function aumentoJuego(){
-    valorActual=1
-    generarNumero()
-    corrida=setInterval(aumentar,50)
-
-}
-
-aumentoJuego()
 
 
-*/
+
+
 
 
 
