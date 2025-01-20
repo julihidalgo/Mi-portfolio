@@ -155,36 +155,34 @@ let botonResta=document.querySelector(".restar")
 let botonSumar=document.querySelector(".sumar")
 function sumar(){
     let apuestaActual=apuesta.textContent
-    if (apuestaActual==5){apuesta.textContent=10 ;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
-    else if (apuestaActual==10){apuesta.textContent=20;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
-    else if (apuestaActual==20){apuesta.textContent=50;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
-    else if (apuestaActual==50){apuesta.textContent=100;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
+    if (apuestaActual==5){apuesta.textContent=10 }
+    else if (apuestaActual==10){apuesta.textContent=20}
+    else if (apuestaActual==20){apuesta.textContent=50}
+    else if (apuestaActual==50){apuesta.textContent=100}
 }
 function restar(){
     let apuestaActual=apuesta.textContent
-    if (apuestaActual==10){apuesta.textContent=5 ;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
-    else if (apuestaActual==20){apuesta.textContent=10;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
-    else if (apuestaActual==50){apuesta.textContent=20;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
-    else if (apuestaActual==100){apuesta.textContent=50;apuesta.textContent='Saldo: '+apuestaActual.toFixed(2)}
+    if (apuestaActual==10){apuesta.textContent=5 }
+    else if (apuestaActual==20){apuesta.textContent=10}
+    else if (apuestaActual==50){apuesta.textContent=20}
+    else if (apuestaActual==100){apuesta.textContent=50}
 }
 function jugar(){
-    if (testeo<apuesta.textContent){
-        alert("Saldo Insuficiente")
+    if (testeo>apuesta.textContent){
+        activado=1
+        tirada()
+        llenar(20)
+        animacion()
+        testear()
+
     }
     else{
-    tirada()
-    llenar(20)
-    animacion()
-    testear()
+        alert("Saldo Insuficiente")
+
     }
 }
 const boton = document.getElementById('jugar');
-boton.addEventListener('click',()=>{
-    if(activado==0){
-        jugar();
-        activado=1
-    }
-});
+boton.addEventListener('click',jugar);
 botonSumar.addEventListener('click', sumar);
 botonResta.addEventListener('click',restar)
 llenar(3)
