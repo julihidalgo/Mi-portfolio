@@ -1315,7 +1315,7 @@ sacarFicha.addEventListener("click",()=>{
 
 
 
-let botonCargarSaldo=document.querySelector(".cargarSaldo")
+/*let botonCargarSaldo=document.querySelector(".cargarSaldo")
 let divCargarSaldo=document.querySelector(".divCargarSaldo")
 botonCargarSaldo.addEventListener("click",()=>{
     divCargarSaldo.style.display="flex";
@@ -1341,4 +1341,4 @@ botonDeposito.addEventListener("click",()=>{
 
     }
 })
-
+*/
