@@ -83,7 +83,19 @@ html{
 	font-family: 'Poppins', sans-serif;
 	font-size: 35px;
 }
-
+.boton-cv{
+	color: white;
+	background: transparent;
+	border: solid 1px white;
+	border-radius: 25px;
+	padding: 10px 15px;
+}
+.boton-cv:hover{
+	cursor: pointer;
+}
+.boton-cv:active{
+	cursor: default;
+}
 
 /*							*/
 /*							*/
