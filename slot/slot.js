@@ -182,7 +182,12 @@ function jugar(){
     }
 }
 const boton = document.getElementById('jugar');
-boton.addEventListener('click',jugar);
+boton.addEventListener('click',()=>{
+    if(activado==0){
+        jugar();
+    }
+    
+});
 botonSumar.addEventListener('click', sumar);
 botonResta.addEventListener('click',restar)
 llenar(3)
